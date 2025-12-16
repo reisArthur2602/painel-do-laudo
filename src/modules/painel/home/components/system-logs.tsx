@@ -28,8 +28,6 @@ export const SystemLogs = ({ logs }: ISystemLogs) => {
 
                             return (
                                 <CardInfo
-                                size='sm'
-                                    padding={4}
                                     icon={icon}
                                     label={log.message}
                                     value={

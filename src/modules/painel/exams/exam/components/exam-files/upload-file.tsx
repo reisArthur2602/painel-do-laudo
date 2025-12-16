@@ -14,7 +14,7 @@ export const UploadFile = ({ examId }: IUploadAttachments) => {
         <div className="flex justify-end">
             <input ref={inputRef} type="file" accept="application/pdf" className="hidden" />
 
-            <Button size="sm" onClick={() => inputRef.current?.click()} disabled={uploading}>
+            <Button onClick={() => inputRef.current?.click()} disabled={uploading}>
                 {uploading ? (
                     <>
                         <Loader2 className="size animate-spin " />

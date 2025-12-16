@@ -5,8 +5,8 @@ import { PublicRoutes } from './public';
 export default function () {
     return (
         <Routes>
-           {PublicRoutes()}
-           {PainelRoutes()}
+            {PublicRoutes()}
+            {PainelRoutes()}
         </Routes>
     );
 }

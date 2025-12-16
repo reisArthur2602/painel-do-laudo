@@ -1,9 +1,7 @@
-import { DownloadCloudIcon, File, Info } from 'lucide-react';
+import { Info } from 'lucide-react';
 import { Navigate, useParams } from 'react-router';
-import { ExamDialog } from '../../../../components/exam-dialog';
 import { Headline } from '../../../../components/headline';
 import { Alert, AlertDescription, AlertTitle } from '../../../../components/ui/alert';
-import { Button } from '../../../../components/ui/button';
 import { mock } from '../../../../lib/mocks';
 import { ExamFiles } from './components/exam-files';
 import { ExamInfo } from './components/exam-info';
@@ -26,17 +24,6 @@ export const ExamPage = () => {
                 children={
                     <div className="flex items-center gap-2">
                         <PrintAccessCode />
-
-                        <Button variant="secondary">
-                            <DownloadCloudIcon />
-                            Baixar
-                        </Button>
-
-                        <ExamDialog exam={exam}>
-                            <Button variant="secondary">
-                                <File /> Editar Exame
-                            </Button>
-                        </ExamDialog>
 
                         {canRelease && <ExamRelease examId={exam.id} canRelease={canRelease} />}
                     </div>

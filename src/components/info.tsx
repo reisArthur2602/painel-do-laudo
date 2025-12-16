@@ -7,14 +7,16 @@ interface IInfoSectionContent {
     cols?: number;
 }
 const InfoContent = ({ children, cols = 4 }: IInfoSectionContent) => {
-    return <ul className={cn(`grid gap-4 grid-cols-2 lg:grid-cols-${cols}`)}>{children}</ul>;
+    return (
+        <section className={cn(`grid gap-4 grid-cols-2 lg:grid-cols-${String(cols)}`)}>{children}</section>
+    );
 };
 
 interface ICardInfo {
     icon: LucideIcon;
     label: string;
-    description?: string;
-    value?: ReactNode;
+
+    value: ReactNode;
     padding?: number;
     size?: 'sm' | 'lg';
     border?: boolean;
@@ -26,13 +28,13 @@ const CardInfo = ({
     value,
     padding = 4,
     size = 'lg',
-    description,
+
     border = true,
 }: ICardInfo) => {
     return (
-        <li
+        <div
             className={cn(
-                `flex items-start gap-4 rounded-xl ${
+                `flex items-center gap-4 rounded-xl ${
                     border ? 'border' : 'border-none'
                 } bg-card p-${padding}`
             )}
@@ -41,16 +43,12 @@ const CardInfo = ({
                 <Icon className={cn(size === 'sm' ? 'size-4' : 'size-5')} />
             </div>
 
-            <div className={cn(`flex flex-col  ${size === 'sm' ? 'text-xs' : 'text-sm'} gap-2`)}>
-                <div className="flex flex-col">
-                    <span className="font-medium text-foreground ">{label}</span>
-                    {description && (
-                        <span className="text-muted-foreground text-xs">{description}</span>
-                    )}
-                </div>
+            <div className={cn(`flex flex-col  ${size === 'sm' ? 'text-xs' : 'text-sm'} gap-1`)}>
+                <span className="font-semibold text-foreground">{label}</span>
+
                 {value}
             </div>
-        </li>
+        </div>
     );
 };
 

@@ -12,7 +12,7 @@ export const Header = () => {
     // const user = null
 
     return (
-        <header className="border-b border-muted/30 bg-card/60">
+        <header className="border-b border-muted/30 bg-card">
             <div className="container mx-auto flex items-center justify-between px-6 py-4">
                 <Logo />
                 {user && <NavigationMenu />}

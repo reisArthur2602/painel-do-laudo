@@ -7,7 +7,7 @@ import { SystemLogs } from './components/system-logs';
 export const PainelPage = () => {
     return (
         <main className="page-wrapper">
-            <Headline title="Painel" subtitle="Visão geral do sistema de laudos" />
+            <Headline title="Painel" subtitle="Visão geral" />
 
             <InfoContent cols={4}>
                 <CardInfo label="Exames aguardando retirada" value="128" icon={ClipboardList} />
