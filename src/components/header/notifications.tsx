@@ -49,7 +49,11 @@ export const Notifications = () => {
                                     padding={2}
                                     icon={meta.icon}
                                     label={meta.title}
-                                    description={meta.description}
+                                    value={
+                                        <span className="text-muted-foreground">
+                                            {meta.description}
+                                        </span>
+                                    }
                                 />
                             </DropdownMenuItem>
                         );

@@ -1,15 +1,12 @@
 import { Slash } from 'lucide-react';
+import { mock } from '../../lib/mocks';
 import { Logo } from './logo';
 import { NavigationMenu } from './navigation-menu';
 import { Notifications } from './notifications';
 import { UserDropdown } from './user-dropdown';
 
 export const Header = () => {
-    const user = {
-        name: 'Suporte',
-        email: 'suporte@admin.com',
-    };
-    // const user = null
+    const user = mock.users[0];
 
     return (
         <header className="border-b border-muted/30 bg-card">

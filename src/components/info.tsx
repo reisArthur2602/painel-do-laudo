@@ -8,7 +8,7 @@ interface IInfoSectionContent {
 }
 const InfoContent = ({ children, cols = 4 }: IInfoSectionContent) => {
     return (
-        <section className={cn(`grid gap-4 grid-cols-2 lg:grid-cols-${String(cols)}`)}>{children}</section>
+        <section className={cn(`grid gap-4 grid-cols-4 xl:grid-cols-${String(cols)}`)}>{children}</section>
     );
 };
 
