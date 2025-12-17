@@ -9,8 +9,8 @@ export const TabsExams = ({ search = 'Pending' }: ITabsExams) => {
     const navigate = useNavigate();
 
     return (
-        <Tabs value={search}>
-            <TabsList>
+        <Tabs value={search} >
+            <TabsList className="w-full">
                 <TabsTrigger
                     value="Pending"
                     onClick={() => navigate({ search: '?status=Pending' })}

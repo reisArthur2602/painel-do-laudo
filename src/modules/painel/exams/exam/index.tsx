@@ -6,7 +6,7 @@ import { Alert, AlertDescription, AlertTitle } from '../../../../components/ui/a
 import { mock } from '../../../../lib/mocks';
 import { ExamFiles } from './components/exam-files';
 import { ExamInfo } from './components/exam-info';
-import { ExamPreview } from './components/exam-preview';
+import { AnamnesisPreview } from './components/anamnesis-Preview';
 import { ExamRelease } from './components/exam-release';
 import { PrintAccessCode } from './components/print-access-code';
 
@@ -42,7 +42,7 @@ export const ExamPage = () => {
             )}
 
             <section className="grid grid-cols-3 gap-6 ">
-                <ExamPreview exam={exam} />
+                <AnamnesisPreview exam={exam} />
                 <div className="flex flex-col gap-4 ">
                     <ExamInfo exam={exam} />
                     <ExamFiles attachments={exam.attachments} examId={exam.id} />

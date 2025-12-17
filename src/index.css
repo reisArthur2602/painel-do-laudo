@@ -102,26 +102,27 @@
 
 @layer base {
     * {
-        @apply border-border outline-ring/50;
+        @apply border-border outline-ring/50 tracking-tighter;
         font-family: 'Geist Mono', monospace;
     }
     body {
-        @apply bg-background text-foreground h-dvh flex flex-col *:flex-1;
+        @apply bg-background text-foreground;
     }
+
     h1 {
-        @apply text-3xl font-semibold tracking-tight text-foreground;
+        @apply text-3xl font-semibold text-foreground;
     }
 
     h2 {
-        @apply text-2xl font-semibold tracking-tight text-foreground;
+        @apply text-2xl font-semibold  text-foreground;
     }
 
     h3 {
-        @apply text-xl font-semibold tracking-tight text-foreground;
+        @apply text-xl font-semibold text-foreground;
     }
 
     h4 {
-        @apply text-lg font-medium tracking-tight text-foreground;
+        @apply text-lg font-medium text-foreground;
     }
 
     h5 {
@@ -129,7 +130,7 @@
     }
 
     h6 {
-        @apply text-sm font-medium uppercase tracking-wide text-muted-foreground;
+        @apply text-sm font-medium uppercase  text-muted-foreground;
     }
 
     p {
