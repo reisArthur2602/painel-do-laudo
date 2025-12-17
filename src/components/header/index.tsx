@@ -1,5 +1,5 @@
 import { Slash } from 'lucide-react';
-import { mock } from '../../lib/mocks';
+import { useSession } from '../../hooks/use-session';
 import { Skeleton } from '../ui/skeleton';
 import { Logo } from './logo';
 import { NavigationMenu } from './navigation-menu';
@@ -30,8 +30,7 @@ const HeaderLoading = () => {
 };
 
 export const Header = () => {
-    const user = mock.users[0];
-    const loading = false;
+    const { loading, user } = useSession();
 
     if (loading) return <HeaderLoading />;
 

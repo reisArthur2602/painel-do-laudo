@@ -2,7 +2,7 @@ import { Navigate, Outlet, Route } from 'react-router';
 import { Headline } from '../components/headline';
 import { InfoContent } from '../components/info';
 import { Skeleton } from '../components/ui/skeleton';
-import { mock } from '../lib/mocks';
+import { useSession } from '../hooks/use-session';
 import { ExamsPage } from '../modules/painel/exams';
 import { ExamPage } from '../modules/painel/exams/exam';
 import { PainelPage } from '../modules/painel/home';
@@ -31,8 +31,7 @@ const AppLoading = () => {
 };
 
 const AuthPainelGuard = () => {
-    const user = mock.users[0];
-    const loading = false;
+    const { loading, user } = useSession();
 
     if (loading) return <AppLoading />;
     if (!user && !loading) return <Navigate to="/" />;
