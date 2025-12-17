@@ -19,6 +19,7 @@ type User = {
     password: string;
     role: UserRole;
     logs: Array<Log>;
+    createdAt: string;
 };
 
 type Log = {

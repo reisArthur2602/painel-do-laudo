@@ -57,17 +57,18 @@ const eventMessages: Record<SystemEvent, string> = {
 };
 
 // USERS ------------------------------------------------------------------
-export const users: Array<User> = Array.from({ length: 10 }).map((_, i) => ({
+export const users: Array<User> = Array.from({ length: 20 }).map((_, i) => ({
     id: uuid(),
-    name: `Usuário Interno ${i + 1}`,
-    email: `user${i + 1}@hospital.com`,
+    name: `Usuário  ${i + 1}`,
+    email: `user${i + 1}@master.com`,
     password: 'master@12345',
     role: rand(['Admin', 'Member']),
     logs: [],
+    createdAt: String(new Date()),
 }));
 
 // PATIENTS ---------------------------------------------------------------
-export const patients: Array<Patient> = Array.from({ length: 20 }).map(() => {
+export const patients: Array<Patient> = Array.from({ length: 200 }).map(() => {
     const name = rand(patientNames);
 
     return {
@@ -82,7 +83,7 @@ export const patients: Array<Patient> = Array.from({ length: 20 }).map(() => {
 });
 
 // EXAMS -----------------------------------------------------------------
-export const exams: Array<Exam> = Array.from({ length: 30 }).map(() => {
+export const exams: Array<Exam> = Array.from({ length: 200 }).map(() => {
     const patient = rand(patients);
 
     return {
@@ -158,23 +159,22 @@ users.forEach((u) => {
     u.logs = logs.filter((l) => l.user.id === u.id);
 });
 
-const notifications:NotificationSocket[] = [
-  {
-    id: 'notif-001',
-    type: 'ExamCreated',
-    examId: 'exam-001',
-    createdAt: new Date().toISOString(),
-  },
-  {
-    id: 'notif-002',
-    type: 'ExamAwaitingPickup',
-    examId: 'exam-002',
-    createdAt: new Date(
-      Date.now() - 1000 * 60 * 10 // 10 minutos atrás
-    ).toISOString(),
-  },
-]
-
+const notifications: NotificationSocket[] = [
+    {
+        id: 'notif-001',
+        type: 'ExamCreated',
+        examId: 'exam-001',
+        createdAt: new Date().toISOString(),
+    },
+    {
+        id: 'notif-002',
+        type: 'ExamAwaitingPickup',
+        examId: 'exam-002',
+        createdAt: new Date(
+            Date.now() - 1000 * 60 * 10 // 10 minutos atrás
+        ).toISOString(),
+    },
+];
 
 export const mock = {
     users,

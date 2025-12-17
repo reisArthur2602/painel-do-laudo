@@ -39,7 +39,7 @@ export const Header = () => {
             <div className="container mx-auto flex items-center justify-between px-6 py-4">
                 <Logo />
 
-                {user && <NavigationMenu />}
+                {user && <NavigationMenu user={user} />}
                 {user && (
                     <div className="flex items-center gap-2">
                         <Notifications />

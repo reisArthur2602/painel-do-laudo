@@ -2,6 +2,7 @@ import { Info } from 'lucide-react';
 import { Navigate, useParams } from 'react-router';
 import { Headline } from '../../../../components/headline';
 import { Alert, AlertDescription, AlertTitle } from '../../../../components/ui/alert';
+
 import { mock } from '../../../../lib/mocks';
 import { ExamFiles } from './components/exam-files';
 import { ExamInfo } from './components/exam-info';
