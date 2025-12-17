@@ -19,7 +19,7 @@ export const ExamFiles = ({ attachments, examId }: IExamFiles) => {
     return (
         <Card>
             <CardHeader className="flex items-center justify-between">
-                <span className="leading-none font-semibold">Arquivos anexados</span>
+                <span className="leading-none font-semibold">Arquivos</span>
                 <UploadFile examId={examId} />
             </CardHeader>
 

@@ -14,7 +14,7 @@ export const ExamInfo = ({ exam }: IExamInfo) => {
     return (
         <Card>
             <CardHeader className="flex items-center justify-between">
-                <span className="leading-none font-semibold">Detalhes do Exame</span>
+                <span className="leading-none font-semibold">Detalhes</span>
                 <ExamDialog exam={exam}>
                     <Button>
                         <File /> Editar Exame
