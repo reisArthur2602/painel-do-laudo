@@ -6,9 +6,10 @@ import { Alert, AlertDescription, AlertTitle } from '../../../../components/ui/a
 import { mock } from '../../../../lib/mocks';
 import { ExamFiles } from './components/exam-files';
 import { ExamInfo } from './components/exam-info';
-import { AnamnesisPreview } from './components/anamnesis-Preview';
+
 import { ExamRelease } from './components/exam-release';
 import { PrintAccessCode } from './components/print-access-code';
+import { AnamnesisPreview } from './components/anamnesis-preview';
 
 export const ExamPage = () => {
     const { id } = useParams();

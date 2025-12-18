@@ -45,8 +45,8 @@ export const Notifications = () => {
                             >
                                 <CardInfo
                                     border={false}
-                                    size="sm"
-                                    padding={2}
+                                    
+                                    padding={4}
                                     icon={meta.icon}
                                     label={meta.title}
                                     value={

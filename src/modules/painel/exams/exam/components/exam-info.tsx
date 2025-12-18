@@ -27,24 +27,6 @@ export const ExamInfo = ({ exam }: IExamInfo) => {
                     <CardInfo
                         padding={2}
                         border={false}
-                        icon={Hash}
-                        label="Registro"
-                        value={<span className="text-muted-foreground">{`#${exam.registry}`}</span>}
-                    />
-                    <CardInfo
-                        padding={2}
-                        border={false}
-                        icon={Activity}
-                        label="Status"
-                        value={
-                            <span className="text-muted-foreground">
-                                {translateStatus(exam.status)}
-                            </span>
-                        }
-                    />
-                    <CardInfo
-                        padding={2}
-                        border={false}
                         icon={User}
                         label="Paciente"
                         value={<span className="text-muted-foreground">{exam.patient.name}</span>}
@@ -58,6 +40,25 @@ export const ExamInfo = ({ exam }: IExamInfo) => {
                         value={
                             <span className="text-muted-foreground">
                                 {formatDateAndAge(exam.patient.birthDate)}
+                            </span>
+                        }
+                    />
+
+                    <CardInfo
+                        padding={2}
+                        border={false}
+                        icon={Hash}
+                        label="Registro"
+                        value={<span className="text-muted-foreground">{`#${exam.registry}`}</span>}
+                    />
+                    <CardInfo
+                        padding={2}
+                        border={false}
+                        icon={Activity}
+                        label="Status"
+                        value={
+                            <span className="text-muted-foreground">
+                                {translateStatus(exam.status)}
                             </span>
                         }
                     />

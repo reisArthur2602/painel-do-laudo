@@ -9,7 +9,7 @@ export const AuthForm = () => {
     const form = useForm();
     return (
         <Form {...form}>
-            <div className="flex flex-col gap-4 mx-auto max-w-md w-full">
+            <div className="flex flex-col gap-4 mx-auto max-w-sm w-full">
                 <CardInfo
                     padding={2}
                     border={false}
